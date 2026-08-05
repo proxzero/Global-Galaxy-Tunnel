@@ -27,7 +27,7 @@ var proxyIPList = [
     "workers.cloudflare.com",
 ];
 
-var githubProxyURL = "https://raw.githubusercontent.com/gprox-galaxy/Gproxy-domaip/refs/heads/main/PROXYIP.txt";
+var githubProxyURL = "https://raw.githubusercontent.com/proxzero/galaxy-subdomain/refs/heads/main/PROXYIP.txt";
 
 // --- DoH Providers (Failover) ---
 var dohURLs = [
