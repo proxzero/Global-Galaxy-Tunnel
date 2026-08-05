@@ -1,0 +1,23 @@
+name = "zero"
+main = "_worker.js"
+compatibility_date = "2024-03-20"
+compatibility_flags = [ "nodejs_compat" ]
+
+# ✅ Variables ကို update လုပ်တဲ့အခါ preserve ထားမယ်
+keep_vars = true
+
+[vars]
+# UUID ကို Dashboard > Variables & Secrets မှာ ထည့်သွင်းပါ (optional - VLESS အတွက်)
+# TROJAN_PASS ကိုလည်း Dashboard မှာ ထည့်နိုင်ပါသည် (optional - TROJAN အတွက်)
+
+# Proxy IP Pool (comma-separated) - IPv4, IPv6, Domain အစုံစည်းထား
+PROXYIP = "104.16.85.20,104.17.123.45,104.21.234.45,172.64.155.1,172.65.250.1,2606:4700:4700::1111,2606:4700:4700::1001,2606:4700:4700::64,2606:4700:4700::6400,cdn.xn--b6gac.eu.org,cdn-all.xn--b6gac.eu.org,cdn-b100.xn--b6gac.eu.org,workers.cloudflare.com"
+
+# GitHub မှ Dynamic ProxyIP Fetch (optional)
+PROXY_LIST_URL = "https://raw.githubusercontent.com/gprox-galaxy/Gproxy-domaip/refs/heads/main/PROXYIP.txt"
+
+# DoH Providers (comma-separated failover)
+DNS_RESOLVER_URL = "https://2mms0p4zud.cloudflare-gateway.com/dns-query,https://dns.google/dns-query,https://dns.quad9.net/dns-query,https://cloudflare-dns.com/dns-query,https://1.1.1.1/dns-query,https://dns.alidns.com/dns-query,https://doh.pub/dns-query"
+
+# Clean SNI Domains (client config အတွက် reference - comma-separated)
+SNI_DOMAINS = "www.visa.com,www.visakorea.com,africa.visa.com,www.visa.com.sg,www.visa.com.hk,www.visasoutheasteurope.com,icook.hk,ip.sb,japan.com,malaysia.com,russia.com,www.gov.se,www.gco.gov.qa"
